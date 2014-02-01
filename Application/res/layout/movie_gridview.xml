@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movie_gridview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/grid_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/movieImage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:src="@drawable/loading" />
+
+        <CheckBox
+            android:id="@+id/movieTrackButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/grid_info"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="3dp"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/movieTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:maxLines="2"
+            android:text="A Long Movie Title That Uses Two Lines"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/movieTheaterDateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/movieTitle"
+            android:layout_below="@+id/movieTitle"
+            android:text="Theater Release: "
+            android:textSize="10sp" />
+        
+        <TextView
+            android:id="@+id/movieTheaterDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/movieTheaterDateTitle"
+            android:layout_centerHorizontal="true"
+            android:text="Nov 21, 1992"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/movieDvdDateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/movieTheaterDate"
+            android:text="DVD Release: "
+            android:textSize="10sp" />
+        
+        <TextView
+            android:id="@+id/movieDvdDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/movieDvdDateTitle"
+            android:layout_centerHorizontal="true"
+            android:text="Oct 24, 1994 "
+            android:textSize="10sp" />
+
+        <CheckBox
+            android:id="@+id/movieTrackButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/movieDvdDate"
+            android:checked="false"
+            android:text="Track"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
